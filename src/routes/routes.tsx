@@ -6,6 +6,7 @@ import ContactUsPage from "../pages/ContactUsPage";
 import Login from "../pages/Login";
 import SignUpPage from "../pages/SignUpPage";
 import HomePage from "../pages/HomePage";
+import UserPage from "../pages/Admin-Side/UserPage";
 
 const AppRouter = () => {
     return (
@@ -18,6 +19,7 @@ const AppRouter = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signUp" element={<SignUpPage />} />
                 <Route path="/home" element={<HomePage />} />
+                <Route path="/user" element={<UserPage />} />
             </Routes>
         </Router>
     );

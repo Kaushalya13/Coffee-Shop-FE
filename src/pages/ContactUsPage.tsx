@@ -73,7 +73,7 @@ const ContactUsPage = () => {
                 <div className="absolute left-55 -bottom-80">
                     <div className="flex items-center space-x-5">
                         <img src="src/assets/Coffee Shop Logo-Footer.png" alt="coffee-shop-logo" className="w-30 h-30 object-cover " />
-                        <span className="text-black text-6xl font-medium " >-Zero-</span>
+                        <span className="text-black text-6xl font-medium" style={{ fontFamily: "Pacifico,cursive"}} >-Zero-</span>
                     </div>
                     <p className="absolute -bottom-15 text-black text-sm font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
