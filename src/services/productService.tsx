@@ -16,6 +16,16 @@ export const fetchProducts = async (token: string) => {
     }
 };
 
+export const fetchActiveProducts = async () => {
+    try {
+        const response = await axios.get(`${API_URL}/active`);
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching products", error);
+        return [];
+    }
+};
+
 export const fetchProductById = async (id: string, token: string) => {
     try {
         const response = await axios.get(`${API_URL}/${id}`, {

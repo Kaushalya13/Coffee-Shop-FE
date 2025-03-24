@@ -11,11 +11,12 @@ import AdminLayout from "../layouts/AdminLayout";
 import AdminDashboard from "../pages/Admin-Side/AdminDashboard";
 import CustomerPage from "../pages/Admin-Side/UserPage";
 import Products from "../pages/Admin-Side/Products";
-import Category from "../pages/Admin-Side/Category";
+import { useAuth } from "../context/AuthContext";
+import Categories from "../pages/Admin-Side/Category";
 
 const AppRouter = () => {
-    // const { token, user } = useAuth();
-    // const role = user?.role ? user.role.toUpperCase() : undefined;
+    const { token, user } = useAuth();
+    const role = user?.role ? user.role.toUpperCase() : undefined;
 
     return (
         <Routes>
@@ -28,25 +29,28 @@ const AppRouter = () => {
             <Route path="/contactUsPage" element={<ContactUsPage />} />
             <Route path="/signUp" element={<SignUpPage />} />
             <Route path="/" element={<HomePage />} />
-
-            <Route path="/admin" element={<AdminLayout />} >
+            
+            {/* Admin Layout with Role Protection */}
+            {/* <Route path="/admin" element={<AdminLayout />} >
                 <Route index element={<Navigate to="/admin/dashboard" />} />
                 <Route path="dashboard" element={<AdminDashboard />} />
                 <Route path="customers" element={<CustomerPage />} />
                 <Route path="Products" element={<Products />} />
                 <Route path="category" element={<Category />} />
-            </Route>
-            {/* Admin Layout with Role Protection */}
-            {/* {token && (role === "ADMIN" || role === "SUPER_ADMIN" || role === "USER") ? (
+            </Route> */}
+            
+            {token && (role === "ADMIN" || role === "SUPER_ADMIN" || role === "USER") ? (
                 <Route path="/admin" element={<AdminLayout />} >
-                    <Route index element={<Navigate to="/admin/dashboard" />} />
-                    <Route path="dashboard" element={<AdminDashboard />} />
-                    <Route path="customers" element={<CustomerPage />} />
-                    <Route path="Products" element={<Products />} />
-                </Route>
-            ):(
+                <Route index element={<Navigate to="/admin/dashboard" />} />
+                <Route path="dashboard" element={<AdminDashboard />} />
+                <Route path="customers" element={<CustomerPage />} />
+                <Route path="Products" element={<Products />} />
+                <Route path="Category" element={<Categories />} />
+            </Route>
+            ) : (
                 <Route path="/admin/*" element={<Navigate to="/login" />} />
-            )} */}
+            )}
+            
         </Routes>
 
 
