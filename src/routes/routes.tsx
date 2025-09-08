@@ -34,17 +34,6 @@ const AppRouter = () => {
                     <Route path="customers" element={<CustomerPage />} />
                     <Route path="Products" element={<Products />} />
                 </Route>
-                {/* Admin Layout with Role Protection */}
-            {/* {token && (role === "ADMIN" || role === "SUPER_ADMIN" || role === "USER") ? (
-                <Route path="/admin" element={<AdminLayout />} >
-                    <Route index element={<Navigate to="/admin/dashboard" />} />
-                    <Route path="dashboard" element={<AdminDashboard />} />
-                    <Route path="customers" element={<CustomerPage />} />
-                    <Route path="Products" element={<Products />} />
-                </Route>
-            ):(
-                <Route path="/admin/*" element={<Navigate to="/login" />} />
-            )} */}
             </Routes>
 
         </Router>
