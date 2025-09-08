@@ -13,8 +13,6 @@ import CustomerPage from "../pages/Admin-Side/UserPage";
 import Products from "../pages/Admin-Side/Products";
 
 const AppRouter = () => {
-    // const { token, user } = useAuth();
-    // const role = user?.role ? user.role.toUpperCase() : undefined;
 
     return (
         <Router>
@@ -49,9 +47,6 @@ const AppRouter = () => {
             )} */}
             </Routes>
 
-            {/* <Route path="/admin" element={<AdminLayout />} >
-                <Route index element={<Navigate to="/admin/dashboard" />} />
-            </Route> */}
         </Router>
     );
 }
