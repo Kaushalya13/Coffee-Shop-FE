@@ -18,3 +18,4 @@ const ForbiddenPage = () => {
 }
 
 export default ForbiddenPage;
+    

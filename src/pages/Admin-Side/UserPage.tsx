@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { FaEdit, FaSearch, FaTrashAlt,} from "react-icons/fa"; 
-import Sidebar from "../../components/Sidebar";
-import Header from "../../components/Header";
 
 
-const UserPage = () => {
+const CustomerPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(false);  
     const [newUser, setNewUser] = useState({ name: "", email: "", role: "", contactNumber: "" });
@@ -20,6 +18,7 @@ const UserPage = () => {
         { id: 5, name: "Charlie Brown", email: "charlie@example.com", role: "User", contactNumber: "+94 760 574 878" },
         { id: 6, name: "Diana Gray", email: "diana@example.com", role: "Moderator", contactNumber: "+94 770 574 878" },
         { id: 7, name: "Elena White", email: "elena@example.com", role: "Admin", contactNumber: "+94 780 574 878" },
+        { id: 8, name: "Elena White", email: "elena@example.com", role: "Admin", contactNumber: "+94 780 574 878" },
     ];
 
     // Filter Users based on Search
@@ -56,35 +55,43 @@ const UserPage = () => {
 
     return (
         <div className="flex">
-            <Sidebar />
-            <div className="flex-1 p-6 mt-20">
-                <Header />
-
+            <div className="flex-1">
+                <div className="py-4 border border-black rounded-lg">
+                    <p className="text-left relative left-2 text-md text-black">All Customer</p>
+                </div>
+                
                 {/* Search & Add User Section */}
-                <div className="flex justify-end items-center p-4 rounded-lg space-x-2">
-                    <div className="relative w-1/3">
-                        <input
-                            type="text"
-                            placeholder="Search users"
-                            className="border p-2 rounded-md w-full pl-10 focus:outline-none"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                        />
-                        <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                <div className="flex justify-between items-center p-4 rounded-lg">
+                    {/* Left-aligned heading */}
+                    <h1 className="text-3xl font-semibold">Customers</h1>
+
+                    {/* Right-aligned search bar and button */}
+                    <div className="flex items-center space-x-2">
+                        <div className="relative w-100">
+                            <input
+                                type="text"
+                                placeholder="Search users"
+                                className="border p-2 rounded-md w-full pl-10 focus:outline-none"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                            />
+                            <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                        </div>
+                        <button
+                            className="bg-black text-white px-4 py-2 rounded-md"
+                            onClick={() => setIsModalOpen(true)}
+                        >
+                            + Add User
+                        </button>
                     </div>
-                    <button
-                        className="bg-black text-white px-4 py-2 rounded-md"
-                        onClick={() => setIsModalOpen(true)}
-                    >
-                        + Add User
-                    </button>
                 </div>
 
+
                 {/* User Table */}
-                <div className="mt-6 bg-white shadow-md rounded-lg p-4">
+                <div className="mt-6 bg-gray-200 shadow-md rounded-lg p-4">
                     <table className="w-full border-collapse">
                         <thead>
-                            <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                            <tr className="bg-white text-black uppercase text-sm leading-normal">
                                 <th className="py-3 px-6 text-left">Name</th>
                                 <th className="py-3 px-6 text-left">Email</th>
                                 <th className="py-3 px-6 text-left">Contact Number</th>
@@ -94,7 +101,7 @@ const UserPage = () => {
                         <tbody className="text-gray-700">
                             {currentUsers.length > 0 ? (
                                 currentUsers.map((user) => (
-                                    <tr key={user.id} className="border-b hover:bg-gray-100">
+                                    <tr key={user.id} className="border-b">
                                         <td className="py-3 px-6">{user.name}</td>
                                         <td className="py-3 px-6">{user.email}</td>
                                         <td className="py-3 px-6">{user.contactNumber}</td>
@@ -225,4 +232,4 @@ const UserPage = () => {
     );
 };
 
-export default UserPage;
+export default CustomerPage;

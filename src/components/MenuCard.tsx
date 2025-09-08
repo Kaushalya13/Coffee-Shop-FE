@@ -25,7 +25,7 @@ const MenuCard: React.FC<CardProps> = ({ main, name, image, review, rating }) =>
 
         {/* Product Image */}
         <div className="flex justify-center items-center py-6">
-          <img src={image} className="w-40 h-65 object-cover" />
+          <img src={image} className="absolute top-5 w-40 h-65 object-cover flex justify-center items-center" />
         </div>
         
       </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignUpPage = () => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -7,12 +7,12 @@ const SignUpPage = () => {
     return (
         <div className="h-screen relative">
             {/* Close Icon */}
-            <button 
+            {/* <button 
                 className="absolute top-5 right-5 text-black text-3xl hover:text-gray-500 transition duration-300"
                 onClick={() => console.log("Close button clicked")} // Replace with actual close logic
             >
                 <FaTimes />
-            </button>
+            </button> */}
 
             <div>
                 <img 

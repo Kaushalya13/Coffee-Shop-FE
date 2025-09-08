@@ -1,12 +1,16 @@
+import Navbar from "../components/Navbar";
+
 const ContactUsPage = () => {
     return (
-        <div className="h-screen">
+        <div >
+            <Navbar/>
             {/* contact us*/}
-            <div className="h-screen bg-black">
-                <h1 className="text-white text-6xl font-lily absolute top-10 left-20">Contact Us</h1>
-                <p className="text-white text-2xl absolute top-40 left-30">Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.et dolore magna aliqua. 
-                    Ut enim <br/>ad minim veniam,quis nostrud exercitation ullamco <br/>laboris nisi ut aliquip ex 
-                    ea commodo consequat.<br/>Duis aute irure dolor in reprehenderit in voluptate <br/>velit esse cillum dolore fugiat nulla pariatur.
+            <div className="h-screen relative top-20 bg-black">
+                <h1 className="text-white text-6xl absolute top-10 left-20" style={{ fontFamily: "Pacifico,cursive"}}>Contact Us</h1>
+                <p className="text-white text-2xl absolute top-40 left-30">Have a question or just want to say hello?  <br/>
+                We'd love to hear from you!   <br/>
+                Reach out via phone, email, or drop us a message, <br/>
+                and we'll get back to you soon.
                 </p> 
                 {/* Input deatils*/}
                 <div className="relative p-5">
@@ -29,7 +33,7 @@ const ContactUsPage = () => {
 
                     {/* Send Button */}
                     <button 
-                        className="absolute right-120 top-120 w-40 h-10 bg-white text-black font-semibold rounded-md hover:bg-gray-800 transition duration-300"
+                        className="absolute right-130 top-120 w-30 h-10 bg-white text-black font-semibold rounded-md hover:bg-gray-800 transition duration-300"
                     >
                         Send
                     </button>
@@ -59,56 +63,72 @@ const ContactUsPage = () => {
                 </div>
 
                 {/* scocial media */}
-                <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex justify-center space-x-4">
+                {/* <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex justify-center space-x-4">
                     <img src="src/assets/FB.png" alt="Facebook" className="w-15 h-15 object-cover" />
                     <img src="src/assets/Instagram.png" alt="Instagram" className="w-15 h-15 object-cover" />
                     <img src="src/assets/Twitter.png" alt="Twitter" className="w-15 h-15 object-cover" />
-                </div>
+                </div> */}
 
         
             </div>
 
-            {/* Footer*/}
-            <div className="h-screen bg-white flex items-end justify-center">
-                <div className="absolute left-55 -bottom-80">
-                    <div className="flex items-center space-x-5">
-                        <img src="src/assets/Coffee Shop Logo-Footer.png" alt="coffee-shop-logo" className="w-30 h-30 object-cover " />
-                        <span className="text-black text-6xl font-medium" style={{ fontFamily: "Pacifico,cursive"}} >-Zero-</span>
+            {/* Footer */}
+            <div className="bg-white text-black py-10 mt-18">
+                {/* Container */}
+                <div className="max-w-screen-xl mx-auto flex justify-between items-start space-x-16">
+                    
+                    {/* Left Side: Logo, Shop Name, Description */}
+                    <div className="flex flex-col items-start space-y-4">
+                        <div className="flex items-center space-x-3 relative left-30">
+                            <img src="src/assets/Coffee Shop Logo-Footer.png" alt="coffee-shop-logo" className="w-20 h-20 object-cover" />
+                            <span className="text-4xl font-medium" style={{ fontFamily: "Pacifico, cursive" }}>-Zero-</span>
+                        </div>
+                        <p className="text-sm text-black max-w-sm relative left-30">
+                            Your one-stop destination for the finest coffee, <br/>served with love. Visit us and experience the <br/>taste of perfection.
+                        </p>
                     </div>
-                    <p className="absolute -bottom-15 text-black text-sm font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    
+                    {/* Center: Navigation */}
+                    <div className="flex justify-center flex-col space-x-10">
+                        <h3 className="text-xl font-bold mb-4">Navigation</h3>
+                        <ul className="space-y-2">
+                            <li><a href="/" className="text-lg transition">Home</a></li>
+                            <li><a href="/shopPage" className="text-lg ">Shop</a></li>
+                            <li><a href="/aboutUsPage" className="text-lg">About Us</a></li>
+                            <li><a href="/contactUsPage" className="text-lg">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    {/* Right Side: Get in Touch */}
+                    <div className="flex flex-col items-end space-y-4">
+                        <h3 className="text-xl font-bold mb-4 relative right-40">Get in Touch</h3>
+                        <ul className="space-y-2 relative right-15">
+                            <li><a href="tel:+94711252789" className="text-lg">(+94) 71-125-2789</a></li>
+                            <li><a href="https://goo.gl/maps/qZT3" className="text-lg">No.15, Galle Road, Kalutara</a></li>
+                            <li><a href="https://www.zerocoffeeshop.lk" className="text-lg" target="_blank" rel="noopener noreferrer">WWW.ZeroCoffeeShop.lk</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                {/* navigation*/} 
-                <div>
-                    <h3 className="absolute left-165 -bottom-55 text-3xl font-bold">Navigation</h3>
-                    <h3 className="absolute left-165 -bottom-65 text-xl">Home</h3>
-                    <h3 className="absolute left-165 -bottom-75 text-xl">Menu</h3>
-                    <h3 className="absolute left-165 -bottom-85 text-xl">About Us</h3>
-                    <h3 className="absolute left-165 -bottom-95 text-xl">Contact Us</h3>
-                </div>
-                
-                {/* get in touch*/} 
-                <div>
-                    <h3 className="absolute right-85 -bottom-55 text-3xl font-bold">Get in Touch</h3>
-                    <h3 className="absolute right-85 -bottom-75 text-xl">(+94) 71-125-2789</h3>
-                    <h3 className="absolute right-85 -bottom-85 text-xl">No.15 , Galle-Road,Kalutara</h3>
-                    <h3 className="absolute right-85 -bottom-95 text-xl">WWW.ZeroCoffeeShop.lk</h3>
+                {/* Social Media Icons */}
+                <div className="mt-4 flex justify-center space-x-6">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <img src="src/assets/FB.png" alt="Facebook" className="bg-black rounded-full w-10 h-10 object-cover" />
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <img src="src/assets/Instagram.png" alt="Instagram" className="bg-black rounded-full w-10 h-10 object-cover" />
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <img src="src/assets/Twitter.png" alt="Twitter" className="bg-black rounded-full w-10 h-10 object-cover" />
+                    </a>
                 </div>
 
-                {/* scocial media */}
-                <div className="absolute -bottom-155 bg-black left-1/2 transform -translate-x-1/2 flex justify-center space-x-4">
-                    <img src="src/assets/FB.png" alt="Facebook" className="w-15 h-15 object-cover" />
-                    <img src="src/assets/Instagram.png" alt="Instagram" className="w-15 h-15 object-cover" />
-                    <img src="src/assets/Twitter.png" alt="Twitter" className="w-15 h-15 object-cover" />
+                {/* Copyright */}
+                <div className="bg-black py-2 mt-5">
+                    <p className="text-center text-sm text-white">Copyright @ 2025 -Zero- | Powered by Zero</p>
                 </div>
-
-
-                {/* copyright*/}   
-                <div className="bg-black absolute -bottom-183 w-full h-20 flex items-center justify-center">
-                    <h3 className="text-white text-center">Copyright @ 2025 -Zero- | Powered by Zero</h3>
-                </div>
-
             </div>
+
 
         </div>
     );
