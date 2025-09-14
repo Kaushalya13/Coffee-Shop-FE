@@ -52,22 +52,3 @@ Running the Application
     ```
 2.  Open your browser and navigate to `http://localhost:5173`.
 
-📁 Project Structure
-
-/src
-|-- /assets
-|-- /components
-|   |-- /models
-|   `-- ...
-|-- /context
-|-- /layouts
-|-- /models
-|-- /pages
-|   |-- /Admin-Side
-|   |-- /errors
-|   `-- ...
-|-- /routes
-|-- /services
-|-- App.tsx
-|-- index.css
-`-- main.tsx
