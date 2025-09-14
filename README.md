@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+☕ Zero Coffee Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Zero Coffee Shop, a cozy retreat for coffee lovers, dreamers, and storytellers. We believe in zero compromises on quality and experience, offering a one-stop destination for the finest coffee served with love.
 
-Currently, two official plugins are available:
+✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Customer-Facing:
+* **Home Page:** An engaging introduction to the coffee shop.
+* **Shop Page:** Browse and purchase a variety of coffee and other beverages.
+* **About Us Page:** Learn about the history and mission of Zero Coffee Shop.
+* **Contact Us Page:** Get in touch with the coffee shop for inquiries.
+* **User Authentication:** Secure login and registration for customers.
 
-## Expanding the ESLint configuration
+Admin Panel:
+* **Dashboard:** An overview of key metrics like total customers, revenue, and orders.
+* **Product Management:** Add, view, update, and delete products in the shop.
+* **Customer Management:** View and manage customer information.
+* **Order Management:** (Future implementation) Track and manage customer orders.
+* **Reports:** (Future implementation) Generate sales and customer reports.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+💻 Technologies Used
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* React
+* TypeScript
+* Tailwind CSS
+* React Router
+* Axios
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🚀 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Prerequisites
+* Node.js and npm (or yarn) installed on your machine.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Installation
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/your-username/zero-coffee-shop.git](https://github.com/your-username/zero-coffee-shop.git)
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd zero-coffee-shop
+    ```
+3.  Install dependencies:
+    ```bash
+    npm install
+    ```
+
+Running the Application
+1.  Start the development server:
+    ```bash
+    npm run dev
+    ```
+2.  Open your browser and navigate to `http://localhost:5173`.
+
+📁 Project Structure
+
+/src
+|-- /assets
+|-- /components
+|   |-- /models
+|   `-- ...
+|-- /context
+|-- /layouts
+|-- /models
+|-- /pages
+|   |-- /Admin-Side
+|   |-- /errors
+|   `-- ...
+|-- /routes
+|-- /services
+|-- App.tsx
+|-- index.css
+`-- main.tsx
